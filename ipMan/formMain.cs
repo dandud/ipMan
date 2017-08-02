@@ -19,7 +19,7 @@ namespace ipMan
             InitializeComponent();
         }
 
-        public void loadAdapters()
+        public void LoadAdapters()
         {
             var obj = new Adapters();
             var values = obj.net_adapters();
@@ -28,7 +28,7 @@ namespace ipMan
 
         private void btnAdapterRefresh_Click(object sender, EventArgs e)
         {
-            loadAdapters();
+            LoadAdapters();
         }
     }
     public class Adapters
@@ -38,7 +38,8 @@ namespace ipMan
             List<String> values = new List<String>();
             foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
             {
-                values.Add(nic.Name +"-"+ nic.Description + "-" + nic.OperationalStatus);
+                if (nic.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
+                values.Add(nic.Name +"-"+ nic.Description + "-" + nic.OperationalStatus+"-"+ nic.NetworkInterfaceType);
             }
             return values;
         }
