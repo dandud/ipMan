@@ -30,6 +30,12 @@ namespace ipMan
         {
             LoadAdapters();
         }
+
+        private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formPreferences frm = new formPreferences();
+            frm.Show();
+        }
     }
     public class Adapters
     {
