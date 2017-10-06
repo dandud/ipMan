@@ -30,12 +30,13 @@
         {
             this.cboAdapterSel = new System.Windows.Forms.ComboBox();
             this.btnAdapterRefresh = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxAdapters = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnEditSelected = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,14 +45,13 @@
             this.cboAdapterSel.AllowDrop = true;
             this.cboAdapterSel.FormatString = "###.###.###";
             this.cboAdapterSel.FormattingEnabled = true;
-            this.cboAdapterSel.Location = new System.Drawing.Point(74, 327);
+            this.cboAdapterSel.Location = new System.Drawing.Point(74, 342);
             this.cboAdapterSel.Name = "cboAdapterSel";
-            this.cboAdapterSel.Size = new System.Drawing.Size(125, 21);
+            this.cboAdapterSel.Size = new System.Drawing.Size(98, 21);
             this.cboAdapterSel.TabIndex = 0;
             // 
             // btnAdapterRefresh
             // 
-            this.btnAdapterRefresh.BackgroundImage = global::ipMan.Properties.Resources.imgRefresh;
             this.btnAdapterRefresh.Location = new System.Drawing.Point(12, 62);
             this.btnAdapterRefresh.Name = "btnAdapterRefresh";
             this.btnAdapterRefresh.Size = new System.Drawing.Size(28, 29);
@@ -59,13 +59,13 @@
             this.btnAdapterRefresh.UseVisualStyleBackColor = true;
             this.btnAdapterRefresh.Click += new System.EventHandler(this.btnAdapterRefresh_Click);
             // 
-            // listBox1
+            // listBoxAdapters
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(74, 62);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(955, 173);
-            this.listBox1.TabIndex = 2;
+            this.listBoxAdapters.FormattingEnabled = true;
+            this.listBoxAdapters.Location = new System.Drawing.Point(74, 62);
+            this.listBoxAdapters.Name = "listBoxAdapters";
+            this.listBoxAdapters.Size = new System.Drawing.Size(955, 173);
+            this.listBoxAdapters.TabIndex = 2;
             // 
             // menuStrip1
             // 
@@ -89,7 +89,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -103,16 +103,27 @@
             // preferencesToolStripMenuItem
             // 
             this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.preferencesToolStripMenuItem.Text = "Preferences";
             this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.preferencesToolStripMenuItem_Click);
+            // 
+            // btnEditSelected
+            // 
+            this.btnEditSelected.Location = new System.Drawing.Point(74, 241);
+            this.btnEditSelected.Name = "btnEditSelected";
+            this.btnEditSelected.Size = new System.Drawing.Size(98, 36);
+            this.btnEditSelected.TabIndex = 4;
+            this.btnEditSelected.Text = "Edit Selected";
+            this.btnEditSelected.UseVisualStyleBackColor = true;
+            this.btnEditSelected.Click += new System.EventHandler(this.btnEditSelected_Click);
             // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 375);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btnEditSelected);
+            this.Controls.Add(this.listBoxAdapters);
             this.Controls.Add(this.btnAdapterRefresh);
             this.Controls.Add(this.cboAdapterSel);
             this.Controls.Add(this.menuStrip1);
@@ -130,12 +141,13 @@
 
         private System.Windows.Forms.ComboBox cboAdapterSel;
         private System.Windows.Forms.Button btnAdapterRefresh;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxAdapters;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem filToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
+        private System.Windows.Forms.Button btnEditSelected;
     }
 }
 
